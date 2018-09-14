@@ -30,7 +30,6 @@ public class OptionsMenu : MonoBehaviour {
         masterVolChange();
         musicVolChange();
         sfxVolChange();
-        //Debug.Log("options menu updating...");
 	}
 
     // Function to change the master volume

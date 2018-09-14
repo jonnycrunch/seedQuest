@@ -79,6 +79,7 @@ public class PauseMenu : MonoBehaviour {
         optionsMenuOpen = true;
         menuObjects.SetActive(false);
         optionsMenu.SetActive(true);
+
     }
 
     // Function for the back button in the options menu
