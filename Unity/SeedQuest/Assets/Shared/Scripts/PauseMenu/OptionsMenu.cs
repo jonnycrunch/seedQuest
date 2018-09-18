@@ -11,7 +11,7 @@ public class OptionsMenu : MonoBehaviour {
     public Slider musicSlider;
     public Slider sfxSlider;
 
-    private bool muted; // this could be changed to use a state instead of a bool if we want
+    public bool muted; // this could be changed to use a state instead of a bool if we want
 
 	void Start () 
     {

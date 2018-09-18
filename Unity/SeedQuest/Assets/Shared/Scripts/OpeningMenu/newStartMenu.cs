@@ -12,6 +12,8 @@ public class newStartMenu : MonoBehaviour {
 	private void Start()
 	{
         seedInput = "";
+        SaveSettings.loadSettings();
+
 	}
 
     // This function should be called once the game enters rehearsal mode

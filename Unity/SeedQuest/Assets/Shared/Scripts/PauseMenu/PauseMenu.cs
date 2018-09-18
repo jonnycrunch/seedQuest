@@ -86,6 +86,12 @@ public class PauseMenu : MonoBehaviour {
     public void optionsBackButton()
     {
         //Debug.Log("options back button pressed");
+
+        OptionsMenu sets = optionsMenu.GetComponent<OptionsMenu>();
+
+        SaveSettings.getSettings(sets.masterSlider.value, sets.musicSlider.value, sets.sfxSlider.value, sets.muted);
+        SaveSettings.saveSettings();
+
         optionsMenuOpen = false;
         optionsMenu.SetActive(false);
         menuObjects.SetActive(true);
