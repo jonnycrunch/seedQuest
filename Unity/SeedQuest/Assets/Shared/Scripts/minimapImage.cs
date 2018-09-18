@@ -9,6 +9,9 @@ public class minimapImage : MonoBehaviour {
     public int yScale;
     public int xScale;
 
+    public int xOffset;
+    public int yOffset;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +20,6 @@ public class minimapImage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        transform.position = new Vector3(-(Player.transform.position.x * xScale), -(Player.transform.position.z * yScale), 0);
+        transform.position = new Vector3(-(Player.transform.position.x * xScale) + xOffset, -(Player.transform.position.z * yScale) + yOffset, 0);
 	}
 }

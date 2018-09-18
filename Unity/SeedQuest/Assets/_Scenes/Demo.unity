@@ -23020,8 +23020,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 371822650}
-  yScale: 10
-  xScale: 10
+  yScale: 11
+  xScale: 17
+  xOffset: 1200
+  yOffset: 130
 --- !u!1 &432844869
 GameObject:
   m_ObjectHideFlags: 0
