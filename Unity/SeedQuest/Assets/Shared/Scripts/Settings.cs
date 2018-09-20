@@ -8,9 +8,9 @@ public class Settings {
 
     public static Settings settingsHere;
 
-    public float masterVol;
-    public float musicVol;
-    public float sfxVol;
-    public bool mute;
+    public static float masterVol;
+    public static float musicVol;
+    public static float sfxVol;
+    public static bool mute;
 
 }

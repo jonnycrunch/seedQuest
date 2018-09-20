@@ -5,16 +5,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 public static class SaveSettings {
-
-
-    public static Settings settings;
-
+    
 
     public static void saveSettings()
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/savedSettings.gd");
-        bf.Serialize(file, settings);
+        bf.Serialize(file, Settings.settingsHere);
         file.Close();
 
     }
@@ -25,17 +22,25 @@ public static class SaveSettings {
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/savedSettings.gd", FileMode.Open);
-            settings = (Settings)bf.Deserialize(file);
+            Settings.settingsHere = (Settings)bf.Deserialize(file);
             file.Close();
+            //Debug.Log(Settings.settingsHere);
+        }
+        else
+        {
+            Settings.masterVol = 1f;  
+            Settings.musicVol = 1f;    
+            Settings.sfxVol = 1f;    
+            Settings.mute = false;    
         }
     }
 
     public static void getSettings(float masterVol, float musicVol, float sfxVol, bool mute)
     {
-        settings.masterVol = masterVol;
-        settings.musicVol = musicVol;
-        settings.sfxVol = sfxVol;
-        settings.mute = mute;
+        Settings.masterVol = masterVol;
+        Settings.musicVol = musicVol;
+        Settings.sfxVol = sfxVol;
+        Settings.mute = mute;
     }
 
 }

@@ -36220,6 +36220,11 @@ Prefab:
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114430653406811324, guid: d63f6196994684cd59e482faa31d4d91,
+        type: 2}
+      propertyPath: optionsMenu
+      value: 
+      objectReference: {fileID: 973607544}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63f6196994684cd59e482faa31d4d91, type: 2}
   m_IsPrefabAsset: 0
@@ -52381,6 +52386,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973028373}
   m_Mesh: {fileID: 4300000, guid: c2eac8a3bde6a92458c72830f63d161f, type: 3}
+--- !u!1 &973607544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1371635599007318, guid: 75bfb8525b39245738cb202e6cb49cb6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2036204149}
 --- !u!1 &975060245
 GameObject:
   m_ObjectHideFlags: 0
@@ -84346,7 +84356,7 @@ Camera:
   m_TargetTexture: {fileID: 8400000, guid: 975510d7c7bf8497aa367f5ed97cffb7, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0

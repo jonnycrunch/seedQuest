@@ -65,4 +65,18 @@ public class OptionsMenu : MonoBehaviour {
         }
         //Debug.Log("Mute button toggled");
     }
+
+    public void loadSavedSettings(float mas, float mus, float sfx, bool mute)
+    {
+        masterSlider.value = mas;
+        musicSlider.value = mus;
+        sfxSlider.value = sfx;
+        muted = mute;
+
+        masterVolChange();
+        musicVolChange();
+        sfxVolChange();
+        gameState.musicMute = muted;
+
+    }
 }

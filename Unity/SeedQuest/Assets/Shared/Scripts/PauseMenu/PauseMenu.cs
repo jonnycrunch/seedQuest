@@ -10,12 +10,12 @@ public class PauseMenu : MonoBehaviour {
 
     public GameStateData gameState;
     private bool optionsMenuOpen;
-
-	
+    	
     private void Start()
 	{
         gameState.isPaused = false;
         optionsMenuOpen = false;
+
 	}
 
 
@@ -85,7 +85,7 @@ public class PauseMenu : MonoBehaviour {
     // Function for the back button in the options menu
     public void optionsBackButton()
     {
-        //Debug.Log("options back button pressed");
+        Debug.Log("options back button pressed");
 
         OptionsMenu sets = optionsMenu.GetComponent<OptionsMenu>();
 

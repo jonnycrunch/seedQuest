@@ -7,6 +7,12 @@ public class newStartMenu : MonoBehaviour {
     public GameStateData gameState;
     public GameObject startMenu;
 
+    public GameObject optionsMenu;
+
+    //public Settings settings;
+
+    private int countOne = 0;
+
     public string seedInput;
 
 	private void Start()
@@ -14,9 +20,31 @@ public class newStartMenu : MonoBehaviour {
         seedInput = "";
         SaveSettings.loadSettings();
 
+        optionsMenu.SetActive(true);
+        OptionsMenu oRef = optionsMenu.GetComponent<OptionsMenu>();
+        oRef.loadSavedSettings(Settings.masterVol, Settings.musicVol, Settings.sfxVol, Settings.mute);
+        gameState.isPaused = true;
+
 	}
 
-    // This function should be called once the game enters rehearsal mode
+	private void Update()
+    {
+        if (countOne == 2)
+        {
+            
+        }
+        else if (countOne == 1)
+        {
+            gameState.isPaused = false;
+            countOne += 1;
+        }
+        else
+        {
+            countOne += 1;
+        }
+	}
+
+	// This function should be called once the game enters rehearsal mode
 	public void inRehearsalMode()
     {
         if(seedInput != "")
